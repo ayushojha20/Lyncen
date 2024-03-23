@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lyncen/components/memberprofilecontainer.dart';
 import 'package:lyncen/pages/loginpage.dart';
+import 'package:lyncen/pages/memberspage.dart';
 import 'package:lyncen/pages/notregisteredpage.dart';
 import 'package:lyncen/pages/profilepage.dart';
 import 'package:lyncen/pages/verifyotp.dart';
@@ -9,6 +11,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
   
   
   @override
@@ -35,7 +38,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return NotRegisteredPage();
+    return MembersPage();
       
     
   }
