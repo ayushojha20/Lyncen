@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:lyncen/components/button.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+class EditMember extends StatelessWidget {
+  const EditMember({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,19 +15,20 @@ class ProfilePage extends StatelessWidget {
               Navigator.pop(context);
             },
           ),
+        title: Text('Edit Member'),
       ),
-    body: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            height: 0.2*MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            child: IconButton(icon: Icon(Icons.person,size: 60,), onPressed: () { },),
-          ),
-          Divider(height: 1),
-          SizedBox(height: 20),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+             Container(
+              height: 0.2*MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: IconButton(icon: Icon(Icons.person,size: 60,), onPressed: () { },),
+            ),
+            Divider(height: 1),
+            SizedBox(height: 20),
           Text('Name',style: Theme.of(context).textTheme.headlineSmall),
           SizedBox(height: 10),
           Container(
@@ -81,15 +82,40 @@ class ProfilePage extends StatelessWidget {
                ),
             ),
           ),
-        SizedBox(height: 40),
-        Button(name: 'SAVE AND PROCEED'),
-
-             
-
-        ],
+          SizedBox(height: 20),
+          Text('Role',style: Theme.of(context).textTheme.headlineSmall),
+          SizedBox(height: 10),
+          Container(
+            height: 50,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(2),border: Border.all(width: 1,color: Color(0XFFC7C7C7))),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                // DropdownButton(items: items, onChanged: onChanged),
+                Text('Manager'),
+                Icon(Icons.arrow_drop_down),
+              ],),
+            ),
+          ),
+          SizedBox(height: 20),
+          Expanded(
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+              width: double.infinity,
+              child: Button(name: 'SAVE AND PROCEED'),
+        ),
       ),
     ),
-    
+
+
+
+          ],
+        ),
+      ),
     );
   }
 }

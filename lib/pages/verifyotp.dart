@@ -24,7 +24,7 @@ class VerifyOTP extends StatelessWidget {
             Text('Verify',style: Theme.of(context).textTheme.headlineLarge,),
             SizedBox(height: 5),
             Text('Please enter your 6-digit code sent you at +91-9936366456',style: Theme.of(context).textTheme.headlineSmall,),
-            SizedBox(height: 50),
+            SizedBox(height: 30),
             Container(
               height: 50,
               width: MediaQuery.of(context).size.width,

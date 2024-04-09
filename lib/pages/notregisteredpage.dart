@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lyncen/components/button.dart';
 
 class NotRegisteredPage extends StatelessWidget {
   const NotRegisteredPage({super.key});
@@ -23,14 +22,12 @@ class NotRegisteredPage extends StatelessWidget {
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              height: 0.3*MediaQuery.of(context).size.height,
+              height: 0.5*MediaQuery.of(context).size.height,
               child: Image.asset('assets/img/notregistered.png'),
             ),
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: 300,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+            Expanded(
+                child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                    Text('Number not registered',style: TextStyle(fontSize: 22,fontWeight: FontWeight.w500),),
